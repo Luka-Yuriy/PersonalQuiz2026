@@ -256,12 +256,6 @@
                                 <variation key="heightClass=compact-widthClass=regular" constant="16"/>
                             </constraint>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="kv3-gw-RMn"/>
-                                <exclude reference="fQY-Xx-Mna"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="lX3-HD-0ws"/>
                     <connections>
