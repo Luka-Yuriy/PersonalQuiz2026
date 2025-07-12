@@ -21,7 +21,13 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var rangedStackView: UIStackView!
     @IBOutlet var rangedLabels: [UILabel]!
-    @IBOutlet var rangedSlider: UISlider!
+    @IBOutlet var rangedSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1)
+            rangedSlider.maximumValue = answerCount
+            rangedSlider.value = answerCount / 2
+        }
+    }
     
     private let questions = Question.getQuestions()
     private var answersChosen: [Answer] = []
@@ -53,6 +59,9 @@ class QuestionsViewController: UIViewController {
     }
     
     @IBAction func rangedButtonAnswerPressed() {
+        let index = lrintf(rangedSlider.value)
+        answersChosen.append(currentAnswers[index])
+        nextQuestion()
     }
 }
 
@@ -78,7 +87,7 @@ extension QuestionsViewController {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
         case .multiple: showMultipleStackView(with: currentAnswers)
-        case .ranged: break
+        case .ranged: showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -96,6 +105,13 @@ extension QuestionsViewController {
         for (label, answer) in zip(multipleLabels, answers) {
             label.text = answer.title
         }
+    }
+    
+    private func showRangedStackView(with answers: [Answer]) {
+        rangedStackView.isHidden = false
+        
+        rangedLabels.first?.text = answers.first?.title
+        rangedLabels.last?.text = answers.last?.title
     }
     
     private func nextQuestion() {
