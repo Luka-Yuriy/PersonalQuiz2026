@@ -11,10 +11,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5A0B73802E1FE80F007550A0 /* Exceptions for "PersonalQuiz2026" folder in "PersonalQuiz2026" target */ = {
+		5AFBE1772E2232FD00D5123D /* Exceptions for "PersonalQuiz2026" folder in "PersonalQuiz2026" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = 5A0B736D2E1FE80E007550A0 /* PersonalQuiz2026 */;
 		};
@@ -24,7 +24,7 @@
 		5A0B73702E1FE80E007550A0 /* PersonalQuiz2026 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				5A0B73802E1FE80F007550A0 /* Exceptions for "PersonalQuiz2026" folder in "PersonalQuiz2026" target */,
+				5AFBE1772E2232FD00D5123D /* Exceptions for "PersonalQuiz2026" folder in "PersonalQuiz2026" target */,
 			);
 			path = PersonalQuiz2026;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27DUN46W9J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalQuiz2026/Info.plist;
+				INFOPLIST_FILE = PersonalQuiz2026/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -179,7 +179,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27DUN46W9J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalQuiz2026/Info.plist;
+				INFOPLIST_FILE = PersonalQuiz2026/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

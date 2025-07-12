@@ -7,7 +7,7 @@
 
 struct Question {
     let title: String
-    let type: ResponseType
+    let responseType: ResponseType
     let answers: [Answer]
 }
 
@@ -47,7 +47,7 @@ extension Question {
         [
             Question(
                 title: "Какую пищу предпочитаете?",
-                type: .single,
+                responseType: .single,
                 answers: [
                     Answer(title: "Стейк", type: .dog),
                     Answer(title: "Рыба", type: .cat),
@@ -57,7 +57,7 @@ extension Question {
             ),
             Question(
                 title: "Что вам нравится больше?",
-                type: .multiple,
+                responseType: .multiple,
                 answers: [
                     Answer(title: "Плавать", type: .dog),
                     Answer(title: "Спать", type: .cat),
@@ -67,14 +67,14 @@ extension Question {
             ),
             Question(
                 title: "Любите ли вы поездки на машине?",
-                type: .ranged,
+                responseType: .ranged,
                 answers: [
                     Answer(title: "Ненавижу", type: .cat),
                     Answer(title: "Нервничаю", type: .rabbit),
                     Answer(title: "Не замечаю", type: .turtle),
                     Answer(title: "Обожаю", type: .dog)
                 ]
-            ),
+            )
         ]
     }
 }
