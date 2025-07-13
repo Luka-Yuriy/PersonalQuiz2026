@@ -12,14 +12,12 @@ class ResultViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var definitionLabel: UILabel!
     
-    var answersChosen: [Answer] = []
-    var questions: [Question] = []
+    var answersChosen: [Answer]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         getResult()
-        
-
     }
 
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
