@@ -8,7 +8,7 @@
 import UIKit
 
 class QuestionsViewController: UIViewController {
-
+    //MARK: IBOutlets
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressView: UIProgressView!
     
@@ -28,7 +28,7 @@ class QuestionsViewController: UIViewController {
             rangedSlider.value = answerCount / 2
         }
     }
-    
+    //MARK: Private Propherties
     private let questions = Question.getQuestions()
     private var answersChosen: [Answer] = []
     private var questionIndex = 0
@@ -36,17 +36,19 @@ class QuestionsViewController: UIViewController {
         questions[questionIndex].answers
     }
     
-    
+    //MARK: Propherties
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     
+    //MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         resultVC.answersChosen = answersChosen
     }
     
+    //MARK: IBActions
     @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let answer = currentAnswers[buttonIndex]

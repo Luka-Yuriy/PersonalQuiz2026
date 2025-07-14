@@ -8,18 +8,21 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    
+    //MARK: IBOutlets
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var definitionLabel: UILabel!
     
+    //MARK: Propherties
     var answersChosen: [Answer]!
     
+    //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         updateResult()
     }
     
+    //MARK: IBActions
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.dismiss(animated: true)
     }
@@ -44,6 +47,7 @@ extension ResultViewController {
             updateUI(with: mostFrequencyAnimal)
         }
     }
+    
     private func updateUI(with animal: AnimalType) {
         resultLabel.text = "Вы - \(animal.rawValue)!"
         definitionLabel.text = animal.definition
